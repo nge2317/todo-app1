@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    color: #222;
+}
+
+.container {
+    width: 600px;
+    max-width: 95%;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px;
+    margin-top: 12px;
+
+    background: white;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    transition: 0.2s;
+}
+
+li:hover {
+    transform: translateY(-2px);
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* Тёмная тема */
+
+body.dark {
+    background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
+    color: white;
+}
+
+body.dark .container {
+    background: #2d2d2d;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+body.dark h1 {
+    color: white;
+}
+
+body.dark li {
+    background: #353535;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark input {
+    background: #444;
+    color: white;
+    border: 1px solid #666;
+}
+
+body.dark button {
+    background: #555;
+    color: white; 
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.filters button {
+    flex: 1;
+}
+
+.priority {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.priority {
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.priority.high {
+    background: rgba(255, 0, 0, 0.15);
+    color: red;
+}
+
+.priority.medium {
+    background: rgba(255, 165, 0, 0.15);
+    color: orange;
+}
+
+.priority.low {
+    background: rgba(0, 128, 0, 0.15);
+    color: green;
+}
+
+.save-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #9e9e9e;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+body.dark .save-btn {
+    background: #4caf50;
+}
+
+body.dark .cancel-btn {
+    background: #9e9e9e;
+}
+
+body.dark .delete-btn {
+    background: #f44336;
+}
+#taskCounter {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+body.dark #taskCounter {
+    color: #ddd;
+}
+button {
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+li span:first-child {
+    flex: 1;
+}
+
+#searchInput {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 14px;
+
+    border: 2px solid transparent;
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #6c63ff;
+
+    box-shadow: 0 0 12px rgba(108, 99, 255, 0.3);
+}
+
+.edit-mode {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+@media (max-width: 768px) {
+    li {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+li button {
+    width: 100%;
+}
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+}
